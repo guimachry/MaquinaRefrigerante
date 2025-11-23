@@ -26,8 +26,15 @@ public class MaquinaRefrigerante {
     }
 
     public  void receberCredito(double valor, Compra compra){
+
+        if (valor != 0.10 && valor != 0.25 && valor != 0.50 && valor != 1.00){
+            System.out.println("moeda inválida");
+            return;
+        }
+
         compra.adicionarCredito(valor);
         saldoMaquina += valor;
+        System.out.println("credito inserido com sucesso");
     }
 
     public void comprar(String nome, Compra compra){
@@ -57,6 +64,25 @@ public class MaquinaRefrigerante {
         System.out.println("refrigerante comprado com sucesso");
         System.out.println("troco : " + compra.devolverTroco());
     }
+
+    public void comprarPorNumero(int numero, Compra compra) {
+
+        String nome = null;
+
+        switch (numero) {
+            case 1: nome = "Coca"; break;
+            case 2: nome = "Guaraná"; break;
+            case 3: nome = "Fanta"; break;
+            case 4: nome = "Sprite"; break;
+            case 5: nome = "Pepsi"; break;
+            default:
+                System.out.println("Opção inválida.");
+                return;
+        }
+
+        comprar(nome, compra);
+    }
+
 
 
 
