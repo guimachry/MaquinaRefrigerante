@@ -25,6 +25,7 @@ public class Main {
                 case 1:
                     sc.nextLine(); // limpa o buffer pra nao dar erro nos centavos
                     System.out.print("Valor da moeda: ");
+                    System.out.println("valores : 0.10 0.25 0.50 e 1 real");
                     String entrada = sc.nextLine().replace(",", ".");
                     double valor = Double.parseDouble(entrada);
                     mr.receberCredito(valor, compra);
@@ -32,11 +33,11 @@ public class Main {
 
                 case 2:
                     System.out.println(" escolha o refri:");
-                    System.out.println("1 - Coca");
-                    System.out.println("2 - Guaraná");
-                    System.out.println("3 - Fanta");
-                    System.out.println("4 - Sprite");
-                    System.out.println("5 - Pepsi");
+                    System.out.println("1 - Coca R$ 6");
+                    System.out.println("2 - Guaraná R$ 5.50");
+                    System.out.println("3 - Fanta R$ 5");
+                    System.out.println("4 - Sprite R$ 5.50");
+                    System.out.println("5 - Pepsi R$ 5.80");
                     System.out.print(" Opção: ");
                     int escolha = sc.nextInt();
 
